@@ -53,4 +53,9 @@ public class LoginActivity extends BaseActivity {
                 break;
         }
     }
+    @Override
+    public void onBackPressedSupport() {
+        super.onBackPressedSupport();
+        overridePendingTransition(R.anim.bottom_silent,R.anim.bottom_out);
+    }
 }

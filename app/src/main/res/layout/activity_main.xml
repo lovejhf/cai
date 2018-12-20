@@ -27,13 +27,13 @@
         <RadioButton
             android:id="@+id/tab_find"
             style="@style/main_bottom_tab_style"
-            android:text="附近" />
+            android:text="菜速达" />
 
 
         <RadioButton
-            android:id="@+id/tab_community"
+            android:id="@+id/tab_cart"
             style="@style/main_bottom_tab_style"
-            android:text="订单" />
+            android:text="购物车" />
 
         <RadioButton
             android:id="@+id/tab_mine"

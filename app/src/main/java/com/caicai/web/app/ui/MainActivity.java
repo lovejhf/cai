@@ -33,7 +33,7 @@ public class MainActivity extends BaseActivity {
     RadioButton tabHome;
     @BindView(R.id.tab_find)
     RadioButton tabFind;
-    @BindView(R.id.tab_community)
+    @BindView(R.id.tab_cart)
     RadioButton tabCommunity;
     @BindView(R.id.tab_mine)
     RadioButton tabMine;

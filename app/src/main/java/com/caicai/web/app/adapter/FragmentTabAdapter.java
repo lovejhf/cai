@@ -5,7 +5,6 @@ import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -57,6 +56,7 @@ public class FragmentTabAdapter implements View.OnClickListener {
             if (index == 2 || index == 3 ) {
                 Intent intent = new Intent(fragmentActivity, LoginActivity.class);
                 fragmentActivity.startActivity(intent);
+                fragmentActivity.overridePendingTransition(R.anim.bottom_in,R.anim.bottom_silent);
                 return;
             }
         }
@@ -106,7 +106,7 @@ public class FragmentTabAdapter implements View.OnClickListener {
                 return 0;
             case R.id.tab_find:
                 return 1;
-            case R.id.tab_community:
+            case R.id.tab_cart:
                 return 2;
             case R.id.tab_mine:
                 return 3;
