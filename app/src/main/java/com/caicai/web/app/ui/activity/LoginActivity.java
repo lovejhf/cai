@@ -3,6 +3,8 @@ package com.caicai.web.app.ui.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
+import android.text.Spannable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -10,7 +12,9 @@ import android.widget.TextView;
 import com.aries.ui.view.radius.RadiusTextView;
 import com.caicai.web.app.BaseActivity;
 import com.caicai.web.app.R;
+import com.caicai.web.app.util.AppManager;
 import com.caicai.web.app.view.ClearEditText;
+import com.zrq.spanbuilder.Spans;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -27,35 +31,55 @@ public class LoginActivity extends BaseActivity {
     TextView register;
     @BindView(R.id.we_chart_login)
     ImageView weChartLogin;
-    @BindView(R.id.qq_login)
-    ImageView qqLogin;
+    @BindView(R.id.register_agree)
+    TextView registerAgree;
+    @BindView(R.id.quick_login)
+    TextView quickLogin;
+    @BindView(R.id.find_pass_word)
+    TextView findPassWord;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+        Spannable spannable = Spans.builder().text("登录/注册即代表同意", 10, ContextCompat.getColor(this, R.color.color_999999))
+                .text("《菜菜网用户注册协议》", 10, ContextCompat.getColor(this, R.color.color_999999)).underLine().build();
+        registerAgree.setText(spannable);
     }
 
-    @OnClick({R.id.login, R.id.register, R.id.we_chart_login, R.id.qq_login})
+    @OnClick({R.id.login, R.id.register, R.id.we_chart_login, R.id.register_agree, R.id.quick_login,R.id.find_pass_word})
     public void onViewClicked(View view) {
         Intent intent = null;
         switch (view.getId()) {
             case R.id.login:
                 break;
             case R.id.register:
-                 intent = new Intent(this,RegisterActivity.class);
-                 startActivity(intent);
+                intent = new Intent(this, RegisterActivity.class);
+                startActivity(intent);
+
                 break;
             case R.id.we_chart_login:
+                intent = new Intent(this, WeChartCheckMobile.class);
+                startActivity(intent);
                 break;
-            case R.id.qq_login:
+            case R.id.register_agree:
+                break;
+            case R.id.quick_login:
+                intent = new Intent(this, MobileQuickLoginActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.find_pass_word:
+                intent = new Intent(this, FindPassWordActivity.class);
+                startActivity(intent);
                 break;
         }
     }
+
     @Override
     public void onBackPressedSupport() {
         super.onBackPressedSupport();
-        overridePendingTransition(R.anim.bottom_silent,R.anim.bottom_out);
+        overridePendingTransition(R.anim.bottom_silent, R.anim.bottom_out);
+        AppManager.getAppManager().finishActivity(LoginActivity.class);
     }
 }

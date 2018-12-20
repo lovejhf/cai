@@ -9,42 +9,52 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.aries.ui.view.radius.RadiusTextView;
 import com.caicai.web.app.BaseActivity;
 import com.caicai.web.app.R;
 import com.caicai.web.app.util.AppManager;
+import com.caicai.web.app.view.ClearEditText;
 import com.zrq.spanbuilder.Spans;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class RegisterActivity extends BaseActivity {
-    @BindView(R.id.register_agree)
-    TextView registerAgree;
-    @BindView(R.id.getCode)
-    TextView getCode;
-    @BindView(R.id.uid_register)
-    TextView uidRegister;
+public class MobileQuickLoginActivity extends BaseActivity {
+    @BindView(R.id.register)
+    TextView register;
+    @BindView(R.id.user_name)
+    ClearEditText userName;
+    @BindView(R.id.login)
+    RadiusTextView login;
+    @BindView(R.id.uid_login)
+    TextView uidLogin;
     @BindView(R.id.we_chart_login)
     ImageView weChartLogin;
+    @BindView(R.id.register_agree)
+    TextView registerAgree;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_quick_login);
         ButterKnife.bind(this);
         Spannable spannable = Spans.builder().text("登录/注册即代表同意", 10, ContextCompat.getColor(this, R.color.color_999999))
                 .text("《菜菜网用户注册协议》", 10, ContextCompat.getColor(this, R.color.color_999999)).underLine().build();
         registerAgree.setText(spannable);
     }
 
-    @OnClick({R.id.getCode, R.id.uid_register, R.id.we_chart_login, R.id.register_agree})
+    @OnClick({R.id.register, R.id.login, R.id.uid_login, R.id.we_chart_login, R.id.register_agree})
     public void onViewClicked(View view) {
         Intent intent = null;
         switch (view.getId()) {
-            case R.id.getCode:
+            case R.id.register:
+                intent = new Intent(this,RegisterActivity.class);
+                startActivity(intent);
                 break;
-            case R.id.uid_register:
+            case R.id.login:
+                break;
+            case R.id.uid_login:
                 intent = new Intent(this,LoginActivity.class);
                 startActivity(intent);
                 break;
@@ -56,9 +66,10 @@ public class RegisterActivity extends BaseActivity {
                 break;
         }
     }
+
     @Override
     public void onBackPressedSupport() {
         super.onBackPressedSupport();
-        AppManager.getAppManager().finishActivity(RegisterActivity.class);
+        AppManager.getAppManager().finishActivity(MobileQuickLoginActivity.class);
     }
 }

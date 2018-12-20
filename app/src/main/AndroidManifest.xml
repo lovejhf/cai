@@ -22,6 +22,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.activity.MobileQuickLoginActivity"></activity>
+        <activity android:name=".ui.activity.WeChartCheckMobile"></activity>
+        <activity android:name=".ui.activity.SettingPassWordActivity"></activity>
+        <activity android:name=".ui.activity.FindPassWordActivity"></activity>
     </application>
 
 </manifest>

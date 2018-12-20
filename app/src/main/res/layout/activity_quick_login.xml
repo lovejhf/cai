@@ -16,7 +16,7 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginLeft="16dp"
-            android:text="账号密码登陆"
+            android:text="手机快捷登录"
             android:layout_height="wrap_content" />
         <TextView
             android:gravity="center"
@@ -42,27 +42,37 @@
         android:layout_marginRight="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-    <com.caicai.web.app.view.ClearEditText
-        android:id="@+id/pass_word"
-        android:hint="请输入密码"
-        android:layout_marginTop="15dp"
-        android:drawablePadding="@dimen/dp_10"
-        android:inputType="textPassword"
-        android:background="@drawable/linearlayout_underline_view"
-        android:layout_marginLeft="16dp"
-        android:padding="@dimen/dp_10"
-        android:layout_marginRight="16dp"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/find_pass_word"
-            android:text="忘记密码?"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="16dp"
+        android:orientation="horizontal"
+        android:background="@drawable/linearlayout_underline_view"
+        >
+
+        <com.caicai.web.app.view.ClearEditText
+            android:id="@+id/phone_code"
+            android:layout_weight="0.3"
+            android:layout_gravity="center_vertical"
+            android:hint="请输入验证码"
+            android:drawablePadding="@dimen/dp_10"
+            android:inputType="number"
+            android:maxLength="6"
+            android:background="@null"
             android:padding="@dimen/dp_10"
-            android:gravity="right"
-            android:layout_marginRight="5dp"
-            android:textColor="@color/color_666666"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/getCode"
+            android:textColor="@color/color_666666"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/dp_10"
+            android:text="发送验证码"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
     <com.aries.ui.view.radius.RadiusTextView
         android:layout_width="match_parent"
         android:textColor="@android:color/white"
@@ -78,10 +88,10 @@
         app:rv_backgroundColor="@color/login_color"
         android:layout_height="wrap_content" />
     <TextView
-        android:text="手机快捷登录"
+        android:text="账号密码登陆"
+        android:id="@+id/uid_login"
         android:padding="@dimen/dp_10"
         android:layout_marginTop="6dp"
-        android:id="@+id/quick_login"
         android:gravity="center"
         android:textColor="@color/home_text_color"
         android:layout_width="match_parent"
