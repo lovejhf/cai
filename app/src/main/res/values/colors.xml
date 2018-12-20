@@ -3,4 +3,12 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="window_color">#EEEEEE</color>
+    <color name="home_text_color">#333333</color>
+    <color name="login_color">#ff02a44f</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_ccc">#cccccc</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_02A44F">#02A44F</color>
+    <color name="color_D8D8D8">#D8D8D8</color>
 </resources>
