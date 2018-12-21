@@ -21,10 +21,10 @@ public class FragmentTabAdapter implements View.OnClickListener {
     private FragmentActivity fragmentActivity; // Fragment所属的Activity
     private int fragmentContentId; // Activity中所要被替换的区域的id
     private int currentTab; // 当前Tab页面索引
-    int[] un_checked_draw = new int[]{R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher};
-    int[] checked_draw = new int[]{R.mipmap.ic_launcher_round, R.mipmap.ic_launcher_round, R.mipmap.ic_launcher_round, R.mipmap.ic_launcher_round};
+    int[] un_checked_draw = new int[]{R.mipmap.ic_home, R.mipmap.ic_home_2, R.mipmap.ic_home_cart, R.mipmap.ic_mine};
+    int[] checked_draw = new int[]{R.mipmap.ic_home_n, R.mipmap.ic_home_2_n, R.mipmap.ic_home_cart_n, R.mipmap.ic_mine_n};
 
-    private boolean isLogin = true;
+    private boolean isLogin = false;
 
     public FragmentTabAdapter(FragmentActivity fragmentActivity, List<Fragment> fragments, int fragmentContentId, RadioGroup rgs) {
         this.fragments = fragments;
