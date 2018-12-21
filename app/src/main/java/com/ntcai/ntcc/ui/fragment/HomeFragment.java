@@ -1,4 +1,4 @@
-package com.caicai.web.app.ui.fragment;
+package com.ntcai.ntcc.ui.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -7,8 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.caicai.web.app.BaseFragment;
-import com.caicai.web.app.R;
+import com.caicai.web.ntcc.BaseFragment;
+import com.ntcai.ntcc.R;
+
 
 public class HomeFragment extends BaseFragment {
     private View rootView ;

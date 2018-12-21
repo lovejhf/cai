@@ -1,4 +1,4 @@
-package com.caicai.web.app;
+package com.ntcai.ntcc;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,11 +10,11 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
-import com.caicai.web.app.util.AppManager;
 import com.gyf.barlibrary.ImmersionBar;
 import com.hjq.bar.OnTitleBarListener;
 import com.hjq.bar.TitleBar;
 import com.mcxiaoke.bus.Bus;
+import com.ntcai.ntcc.util.AppManager;
 
 import me.yokeyword.fragmentation.SwipeBackLayout;
 import me.yokeyword.fragmentation_swipeback.SwipeBackActivity;

@@ -1,14 +1,14 @@
-package com.caicai.web.app.http;
+package com.ntcai.ntcc.http;
 
 
 import com.alibaba.fastjson.JSON;
-import com.caicai.web.app.util.Constant;
 import com.hjq.toast.ToastUtils;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.HttpParams;
 import com.lzy.okgo.model.Response;
 import com.lzy.okgo.request.PostRequest;
+import com.ntcai.ntcc.util.Constant;
 
 import java.io.IOException;
 import java.util.Map;

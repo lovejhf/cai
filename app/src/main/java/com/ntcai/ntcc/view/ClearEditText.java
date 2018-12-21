@@ -1,4 +1,4 @@
-package com.caicai.web.app.view;
+package com.ntcai.ntcc.view;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -14,7 +14,8 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.EditText;
 
-import com.caicai.web.app.R;
+import com.ntcai.ntcc.R;
+
 
 @SuppressLint("AppCompatCustomView")
 public class ClearEditText extends EditText {

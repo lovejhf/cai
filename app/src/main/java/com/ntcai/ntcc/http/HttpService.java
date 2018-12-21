@@ -1,4 +1,4 @@
-package com.caicai.web.app.http;
+package com.ntcai.ntcc.http;
 
 
 public interface HttpService {

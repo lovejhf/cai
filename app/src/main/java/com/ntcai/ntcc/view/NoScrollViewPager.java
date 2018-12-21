@@ -1,4 +1,4 @@
-package com.caicai.web.app.view;
+package com.ntcai.ntcc.view;
 
 import android.content.Context;
 import android.support.v4.view.ViewPager;

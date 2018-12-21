@@ -1,10 +1,11 @@
-package com.caicai.web.app.ui.activity;
+package com.ntcai.ntcc.ui.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-import com.caicai.web.app.BaseActivity;
-import com.caicai.web.app.R;
+import com.ntcai.ntcc.BaseActivity;
+import com.ntcai.ntcc.R;
+
 
 public class FindPassWordActivity extends BaseActivity {
     @Override

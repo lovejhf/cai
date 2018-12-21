@@ -1,4 +1,4 @@
-package com.caicai.web.app.util;
+package com.ntcai.ntcc.util;
 
 import android.app.Activity;
 

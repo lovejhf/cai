@@ -1,4 +1,4 @@
-package com.caicai.web.app.ui.activity;
+package com.ntcai.ntcc.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,8 +7,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.aries.ui.view.radius.RadiusTextView;
-import com.caicai.web.app.BaseActivity;
-import com.caicai.web.app.R;
+import com.ntcai.ntcc.BaseActivity;
+import com.ntcai.ntcc.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

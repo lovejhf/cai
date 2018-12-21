@@ -1,4 +1,4 @@
-package com.caicai.web.app.ui.activity;
+package com.ntcai.ntcc.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,9 +9,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.caicai.web.app.BaseActivity;
-import com.caicai.web.app.R;
-import com.caicai.web.app.util.AppManager;
+import com.ntcai.ntcc.BaseActivity;
+import com.ntcai.ntcc.R;
+import com.ntcai.ntcc.util.AppManager;
 import com.zrq.spanbuilder.Spans;
 
 import butterknife.BindView;

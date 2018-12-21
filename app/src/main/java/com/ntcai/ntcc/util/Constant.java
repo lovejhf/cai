@@ -1,4 +1,4 @@
-package com.caicai.web.app.util;
+package com.ntcai.ntcc.util;
 
 public class Constant {
     public static final  String SERVER_PATH="https://guanjiatongtest.anyoucloud.com/api/service/";

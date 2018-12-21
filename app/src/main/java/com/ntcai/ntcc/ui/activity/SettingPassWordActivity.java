@@ -1,12 +1,12 @@
-package com.caicai.web.app.ui.activity;
+package com.ntcai.ntcc.ui.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
 import com.aries.ui.view.radius.RadiusTextView;
-import com.caicai.web.app.BaseActivity;
-import com.caicai.web.app.R;
-import com.caicai.web.app.view.ClearEditText;
+import com.ntcai.ntcc.BaseActivity;
+import com.ntcai.ntcc.R;
+import com.ntcai.ntcc.view.ClearEditText;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
