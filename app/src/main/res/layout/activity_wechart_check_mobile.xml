@@ -15,7 +15,7 @@
         android:layout_marginTop="51dp"
         android:layout_height="wrap_content" />
 
-    <com.caicai.web.app.view.ClearEditText
+    <com.ntcai.ntcc.view.ClearEditText
         android:id="@+id/user_name"
         android:hint="请输入账号"
         android:drawablePadding="@dimen/dp_10"
@@ -36,7 +36,7 @@
         android:background="@drawable/linearlayout_underline_view"
         >
 
-        <com.caicai.web.app.view.ClearEditText
+        <com.ntcai.ntcc.view.ClearEditText
             android:id="@+id/phone_code"
             android:layout_weight="0.3"
             android:layout_gravity="center_vertical"

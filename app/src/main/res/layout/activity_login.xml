@@ -31,7 +31,7 @@
             android:layout_height="wrap_content" />
     </RelativeLayout>
 
-    <com.caicai.web.app.view.ClearEditText
+    <com.ntcai.ntcc.view.ClearEditText
         android:id="@+id/user_name"
         android:hint="请输入账号"
         android:drawablePadding="@dimen/dp_10"
@@ -42,7 +42,7 @@
         android:layout_marginRight="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-    <com.caicai.web.app.view.ClearEditText
+    <com.ntcai.ntcc.view.ClearEditText
         android:id="@+id/pass_word"
         android:hint="请输入密码"
         android:layout_marginTop="15dp"

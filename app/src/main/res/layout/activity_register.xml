@@ -14,7 +14,7 @@
         android:layout_marginLeft="16dp"
         android:text="手机注册"
         android:layout_height="wrap_content" />
-    <com.caicai.web.app.view.ClearEditText
+    <com.ntcai.ntcc.view.ClearEditText
         android:id="@+id/user_name"
         android:hint="请输入手机号"
         android:drawablePadding="@dimen/dp_10"
@@ -36,7 +36,7 @@
         android:background="@drawable/linearlayout_underline_view"
         >
 
-        <com.caicai.web.app.view.ClearEditText
+        <com.ntcai.ntcc.view.ClearEditText
             android:id="@+id/phone_code"
             android:layout_weight="0.3"
             android:layout_gravity="center_vertical"
@@ -58,7 +58,7 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
 
-    <com.caicai.web.app.view.ClearEditText
+    <com.ntcai.ntcc.view.ClearEditText
         android:id="@+id/pass_word"
         android:hint="设置6-16位密码(由数字,字母或者符号组成)"
         android:drawablePadding="@dimen/dp_10"
@@ -70,7 +70,7 @@
         android:layout_marginRight="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-    <com.caicai.web.app.view.ClearEditText
+    <com.ntcai.ntcc.view.ClearEditText
         android:hint="请再次输入密码"
         android:drawablePadding="@dimen/dp_10"
         android:layout_marginTop="@dimen/dp_10"

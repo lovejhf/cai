@@ -15,7 +15,7 @@
         android:layout_marginTop="51dp"
         android:layout_height="wrap_content" />
 
-    <com.caicai.web.app.view.ClearEditText
+    <com.ntcai.ntcc.view.ClearEditText
         android:id="@+id/pass_word"
         android:hint="设置6-16位密码(由数字,字母或者符号组成)"
         android:drawablePadding="@dimen/dp_10"
