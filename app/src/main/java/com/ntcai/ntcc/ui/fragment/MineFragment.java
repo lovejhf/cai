@@ -1,5 +1,6 @@
 package com.ntcai.ntcc.ui.fragment;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -16,13 +17,14 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.allen.library.CircleImageView;
-import com.allen.library.SuperTextView;
-import com.caicai.web.ntcc.BaseFragment;
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.gyf.barlibrary.ImmersionBar;
+import com.ntcai.ntcc.BaseFragment;
 import com.ntcai.ntcc.R;
 import com.ntcai.ntcc.adapter.MineMenuOrderAdapter;
 import com.ntcai.ntcc.adapter.OrderMenuAdapter;
 import com.ntcai.ntcc.bean.MineOrderVo;
+import com.ntcai.ntcc.ui.activity.SettingActivity;
 import com.ntcai.ntcc.view.ItemPositionDecoration;
 import com.zrq.spanbuilder.Spans;
 
@@ -65,13 +67,39 @@ public class MineFragment extends BaseFragment {
         OrderMenuAdapter orderMenuAdapter = new OrderMenuAdapter(R.layout.item_order_status, getMenus());
         mineOrderMenu.setAdapter(orderMenuAdapter);
         mineMenuList.setLayoutManager(new LinearLayoutManager(getActivity()));
-        MineMenuOrderAdapter mineMenuOrderAdapter = new MineMenuOrderAdapter(R.layout.item_mine_menu, getMineMenus());
+        final MineMenuOrderAdapter mineMenuOrderAdapter = new MineMenuOrderAdapter(R.layout.item_mine_menu, getMineMenus());
         mineMenuList.setAdapter(mineMenuOrderAdapter);
         mineMenuList.addItemDecoration(new ItemPositionDecoration());
         ImmersionBar.setTitleBar(getActivity(), toolBarLayout);
         Spannable spannable = Spans.builder().text("userName",16,Color.WHITE)
                 .text("\n187****0068",12,Color.WHITE).build();
         userName.setText(spannable);
+
+        mineMenuOrderAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                Intent intent = null;
+                switch (mineMenuOrderAdapter.getData().get(position).getName()){
+                    case "我的账户":
+                        break;
+                    case "优惠券":
+                        break;
+                    case "地址管理":
+                        break;
+                    case "邀请好友":
+                        break;
+                    case "购菜指南":
+                        break;
+                    case "意见反馈":
+                        break;
+                    case "设置":
+                        intent = new Intent(getActivity(),SettingActivity.class);
+                        startActivity(intent);
+                        break;
+
+                }
+            }
+        });
     }
 
     @Override

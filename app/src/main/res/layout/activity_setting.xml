@@ -1,6 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-</android.support.constraint.ConstraintLayout>
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+    <com.hjq.bar.TitleBar
+        app:title="设置"
+        app:title_right="保存"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:id="@+id/show_selected_header_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="horizontal"
+        >
+        <com.allen.library.CircleImageView
+            android:layout_width="60dp"
+            android:layout_margin="@dimen/dp_10"
+            android:src="@mipmap/bg_header"
+            android:layout_height="60dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:text="修改头像"
+            android:textColor="@color/color_999999"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dp_10"
+            android:drawableRight="@mipmap/ic_left_more"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/setting_recycler_view"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:text="退出登录"
+        android:textSize="@dimen/sp_14"
+        android:padding="@dimen/dp_10"
+        android:gravity="center"
+        android:id="@+id/login_out"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

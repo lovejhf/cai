@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.ntcai.ntcc"
-        minSdkVersion 21
+        minSdkVersion 19
         targetSdkVersion 28
         versionCode 16
         versionName "4.8"
@@ -75,4 +75,9 @@ dependencies {
     implementation 'com.jpeng:JPTabBar:1.4.0'
     implementation 'com.zrq:spanbuilder:1.0.5'
     implementation 'com.github.lygttpod:SuperTextView:2.1.5'
+
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5.1'
+
+    implementation 'pub.devrel:easypermissions:2.0.0'
 }

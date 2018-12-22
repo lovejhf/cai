@@ -7,8 +7,14 @@
         android:id="@+id/FrameAct_FragmentGroup"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/RadioG_Bottem"
+        android:layout_above="@id/line"
         />
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_above="@id/RadioG_Bottem"
+        android:background="@drawable/rectangle"
+        android:layout_height="2dp"/>
     <RadioGroup
         android:id="@+id/RadioG_Bottem"
         android:layout_width="match_parent"
