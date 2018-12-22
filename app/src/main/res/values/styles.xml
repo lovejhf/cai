@@ -9,7 +9,7 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowBackground">@color/window_color</item>
-        <item name="android:textSize">14sp</item> <!--  搞掂字体大小-->
+        <item name="android:textSize">12sp</item> <!--  搞掂字体大小-->
         <item name="android:textColor">@color/home_text_color</item>
         <item name="actionMenuTextColor">@android:color/white</item>
         <item name="android:windowIsTranslucent">true</item>

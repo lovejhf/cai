@@ -74,4 +74,5 @@ dependencies {
     implementation files('libs/Tbs.jar')
     implementation 'com.jpeng:JPTabBar:1.4.0'
     implementation 'com.zrq:spanbuilder:1.0.5'
+    implementation 'com.github.lygttpod:SuperTextView:2.1.5'
 }

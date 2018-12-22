@@ -74,4 +74,8 @@ public class MainActivity extends BaseActivity {
         set.start();
     }
 
+    @Override
+    public boolean swipeBackPriority() {
+        return false;
+    }
 }

@@ -1,24 +1,105 @@
 package com.ntcai.ntcc.ui.fragment;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.text.Spannable;
+import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
+import com.allen.library.CircleImageView;
+import com.allen.library.SuperTextView;
 import com.caicai.web.ntcc.BaseFragment;
+import com.gyf.barlibrary.ImmersionBar;
 import com.ntcai.ntcc.R;
+import com.ntcai.ntcc.adapter.MineMenuOrderAdapter;
+import com.ntcai.ntcc.adapter.OrderMenuAdapter;
+import com.ntcai.ntcc.bean.MineOrderVo;
+import com.ntcai.ntcc.view.ItemPositionDecoration;
+import com.zrq.spanbuilder.Spans;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 
 public class MineFragment extends BaseFragment {
-    private View rootView ;
+    Unbinder unbinder;
+    @BindView(R.id.mine_order_menu)
+    RecyclerView mineOrderMenu;
+    @BindView(R.id.mine_menu_list)
+    RecyclerView mineMenuList;
+    @BindView(R.id.header)
+    CircleImageView header;
+    @BindView(R.id.user_name)
+    TextView userName;
+    @BindView(R.id.tool_bar_layout)
+    RelativeLayout toolBarLayout;
+    private View rootView;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        if (rootView==null){
-            rootView = inflater.inflate(R.layout.fragment_mine,container,false);
+        if (rootView == null) {
+            rootView = inflater.inflate(R.layout.fragment_mine, container, false);
         }
+        unbinder = ButterKnife.bind(this, rootView);
         return rootView;
     }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        mineOrderMenu.setLayoutManager(new GridLayoutManager(getActivity(), 4));
+        OrderMenuAdapter orderMenuAdapter = new OrderMenuAdapter(R.layout.item_order_status, getMenus());
+        mineOrderMenu.setAdapter(orderMenuAdapter);
+        mineMenuList.setLayoutManager(new LinearLayoutManager(getActivity()));
+        MineMenuOrderAdapter mineMenuOrderAdapter = new MineMenuOrderAdapter(R.layout.item_mine_menu, getMineMenus());
+        mineMenuList.setAdapter(mineMenuOrderAdapter);
+        mineMenuList.addItemDecoration(new ItemPositionDecoration());
+        ImmersionBar.setTitleBar(getActivity(), toolBarLayout);
+        Spannable spannable = Spans.builder().text("userName",16,Color.WHITE)
+                .text("\n187****0068",12,Color.WHITE).build();
+        userName.setText(spannable);
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
+    }
+
+
+    private List<Pair<String, Integer>> getMenus() {
+        List<Pair<String, Integer>> menus = new ArrayList<>();
+        menus.add(new Pair<>("未付款", R.mipmap.ic_order_unpaid));
+        menus.add(new Pair<>("待发货", R.mipmap.ic_order_un_delivery));
+        menus.add(new Pair<>("已发货", R.mipmap.ic_order_shipped));
+        menus.add(new Pair<>("已完成", R.mipmap.ic_order_complete));
+        return menus;
+    }
+
+    private List<MineOrderVo> getMineMenus() {
+        List<MineOrderVo> menus = new ArrayList<>();
+        menus.add(new MineOrderVo(R.mipmap.ic_mine_account, "我的账户", "1000"));
+        menus.add(new MineOrderVo(R.mipmap.ic_mine_coupon, "优惠券", ""));
+        menus.add(new MineOrderVo(R.mipmap.ic_mine_address, "地址管理", ""));
+        menus.add(new MineOrderVo(R.mipmap.ic_mine_invite_frind, "邀请好友", "邀请好友享优惠"));
+        menus.add(new MineOrderVo(R.mipmap.ic_buy_guide, "购菜指南", ""));
+        menus.add(new MineOrderVo(R.mipmap.ic_mine_opinion, "意见反馈", "发表您宝贵的意见"));
+        menus.add(new MineOrderVo(R.mipmap.ic_mine_setting, "设置", ""));
+        return menus;
+    }
+
 }
