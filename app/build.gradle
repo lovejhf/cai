@@ -13,12 +13,28 @@ android {
             abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
         }
     }
-    buildTypes {
+    signingConfigs {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            storeFile file("ntcai.jks")
+            storePassword "4000885164"
+            keyAlias "ntcai"
+            keyPassword "4000885164"
         }
     }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+        }
+        lintOptions {
+            checkReleaseBuilds false
+            abortOnError false
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+
 }
 
 dependencies {
