@@ -1,4 +1,4 @@
-package com.caicai.web.app;
+package com.ntcai.ntcc;
 
 import org.junit.Test;
 
