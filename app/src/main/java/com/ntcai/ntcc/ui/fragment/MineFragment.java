@@ -13,6 +13,7 @@ import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -24,6 +25,8 @@ import com.ntcai.ntcc.R;
 import com.ntcai.ntcc.adapter.MineMenuOrderAdapter;
 import com.ntcai.ntcc.adapter.OrderMenuAdapter;
 import com.ntcai.ntcc.bean.MineOrderVo;
+import com.ntcai.ntcc.ui.activity.MessageActivity;
+import com.ntcai.ntcc.ui.activity.MineOrderActivity;
 import com.ntcai.ntcc.ui.activity.SettingActivity;
 import com.ntcai.ntcc.view.ItemPositionDecoration;
 import com.zrq.spanbuilder.Spans;
@@ -33,6 +36,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.Unbinder;
 
 
@@ -48,6 +52,10 @@ public class MineFragment extends BaseFragment {
     TextView userName;
     @BindView(R.id.tool_bar_layout)
     RelativeLayout toolBarLayout;
+    @BindView(R.id.message)
+    ImageView message;
+    @BindView(R.id.all_order)
+    TextView allOrder;
     private View rootView;
 
     @Nullable
@@ -71,15 +79,15 @@ public class MineFragment extends BaseFragment {
         mineMenuList.setAdapter(mineMenuOrderAdapter);
         mineMenuList.addItemDecoration(new ItemPositionDecoration());
         ImmersionBar.setTitleBar(getActivity(), toolBarLayout);
-        Spannable spannable = Spans.builder().text("userName",16,Color.WHITE)
-                .text("\n187****0068",12,Color.WHITE).build();
+        Spannable spannable = Spans.builder().text("userName", 16, Color.WHITE)
+                .text("\n187****0068", 12, Color.WHITE).build();
         userName.setText(spannable);
 
         mineMenuOrderAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 Intent intent = null;
-                switch (mineMenuOrderAdapter.getData().get(position).getName()){
+                switch (mineMenuOrderAdapter.getData().get(position).getName()) {
                     case "我的账户":
                         break;
                     case "优惠券":
@@ -93,7 +101,7 @@ public class MineFragment extends BaseFragment {
                     case "意见反馈":
                         break;
                     case "设置":
-                        intent = new Intent(getActivity(),SettingActivity.class);
+                        intent = new Intent(getActivity(), SettingActivity.class);
                         startActivity(intent);
                         break;
 
@@ -130,4 +138,18 @@ public class MineFragment extends BaseFragment {
         return menus;
     }
 
+    @OnClick({R.id.message, R.id.all_order})
+    public void onViewClicked(View view) {
+        Intent intent = null;
+        switch (view.getId()) {
+            case R.id.message:
+                intent = new Intent(getActivity(),MessageActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.all_order:
+                intent = new Intent(getActivity(),MineOrderActivity.class);
+                startActivity(intent);
+                break;
+        }
+    }
 }

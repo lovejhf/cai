@@ -2,17 +2,20 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent">
     <com.hjq.bar.TitleBar
-        app:icon_back="false"
-        app:title="分类"
+        android:layout_width="match_parent"
         android:id="@+id/title"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/good_type_list"
+    <com.aries.ui.view.radius.RadiusEditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        app:rv_strokeColor="@color/window_color"
+        app:rv_strokeWidth="1dp"
+        android:hint="look"
+        android:padding="@dimen/dp_10"
+        app:rv_backgroundColor="@color/white"
+        android:textSize="15sp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_height="wrap_content" />
 </LinearLayout>

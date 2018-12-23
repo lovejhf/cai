@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ntcai.ntcc">
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
     <application
+        android:name=".BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name=".BaseApplication"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.activity.LoginActivity">
-
-        </activity>
-        <activity android:name=".ui.activity.RegisterActivity">
-
-        </activity>
+        <activity android:name=".ui.activity.LoginActivity" />
+        <activity android:name=".ui.activity.RegisterActivity" />
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,11 +26,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.MobileQuickLoginActivity"></activity>
-        <activity android:name=".ui.activity.WeChartCheckMobile"></activity>
-        <activity android:name=".ui.activity.SettingPassWordActivity"></activity>
-        <activity android:name=".ui.activity.FindPassWordActivity"></activity>
-        <activity android:name=".ui.activity.SettingActivity"></activity>
+        <activity android:name=".ui.activity.MobileQuickLoginActivity" />
+        <activity android:name=".ui.activity.WeChartCheckMobile" />
+        <activity android:name=".ui.activity.SettingPassWordActivity" />
+        <activity android:name=".ui.activity.FindPassWordActivity" />
+        <activity android:name=".ui.activity.SettingActivity" />
+        <activity android:name=".ui.activity.ModifyUserNameActivity" />
+        <activity android:name=".ui.activity.ModifyMobileActivity" />
+        <activity android:name=".ui.activity.ModifyPassWord" />
+        <activity android:name=".ui.activity.MessageActivity" />
+        <activity android:name=".ui.activity.MineOrderActivity"></activity>
+        <activity android:name=".ui.activity.GoodsTypeActivity"></activity>
     </application>
 
 </manifest>

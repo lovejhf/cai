@@ -13,4 +13,12 @@
         <attr name="iconClear" format="reference" />
         <attr name="drawLine" format="boolean" />
     </declare-styleable>
+
+    <declare-styleable name="NumberButton">
+        <attr name="editable" format="boolean" />
+        <attr name="buttonWidth" format="dimension" />
+        <attr name="textWidth" format="dimension" />
+        <attr name="textSize" format="dimension" />
+        <attr name="textColor" format="color" />
+    </declare-styleable>
 </resources>

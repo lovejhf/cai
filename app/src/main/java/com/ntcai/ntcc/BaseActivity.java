@@ -62,8 +62,9 @@ public class BaseActivity extends SwipeBackActivity {
     /**
      * 初始化 Toolbar
      */
-    public void initToolBar(TitleBar toolbar, String title) {
+    public void initToolBar(TitleBar toolbar, String title,String rightTitle) {
         toolbar.setTitle(title);
+        toolbar.setRightTitle(rightTitle);
         toolbar.setOnTitleBarListener(new OnTitleBarListener() {
 
             @Override

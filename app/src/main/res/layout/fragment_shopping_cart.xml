@@ -23,6 +23,7 @@
         android:background="@color/white"
         >
         <CheckBox
+            android:id="@+id/cb_select_num"
             android:layout_width="match_parent"
             android:text="全选"
             android:layout_weight="1.0"
@@ -43,10 +44,11 @@
             android:layout_width="match_parent"
             android:gravity="center"
             app:rv_radius="25dp"
+            android:id="@+id/submit"
             android:textColor="@color/white"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:text="结算"
+            android:text="结算(0)"
             android:layout_marginLeft="@dimen/dp_10"
             android:layout_marginRight="@dimen/dp_10"
             android:padding="@dimen/dp_10"
