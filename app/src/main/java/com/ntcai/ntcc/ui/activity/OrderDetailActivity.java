@@ -69,7 +69,6 @@ public class OrderDetailActivity extends BaseActivity {
         pairs.add(new Pair<>("配送方式：", "配送"));
         OrderInfoAdapter orderInfoAdapter = new OrderInfoAdapter(R.layout.item_order_info, pairs);
         distributionInfoList.setAdapter(orderInfoAdapter);
-
         List<Pair<String, String>> pairs1 = new ArrayList<>();
         pairs1.add(new Pair<>("订单信息：", ""));
         pairs1.add(new Pair<>("订单编号：", "8938390928199291"));
