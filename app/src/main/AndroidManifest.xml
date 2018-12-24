@@ -26,7 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.MobileQuickLoginActivity" />
+        <activity android:name=".ui.activity.MobileQuickLoginActivity"></activity>
         <activity android:name=".ui.activity.WeChartCheckMobile" />
         <activity android:name=".ui.activity.SettingPassWordActivity" />
         <activity android:name=".ui.activity.FindPassWordActivity" />
@@ -35,8 +35,9 @@
         <activity android:name=".ui.activity.ModifyMobileActivity" />
         <activity android:name=".ui.activity.ModifyPassWord" />
         <activity android:name=".ui.activity.MessageActivity" />
-        <activity android:name=".ui.activity.MineOrderActivity"></activity>
-        <activity android:name=".ui.activity.GoodsTypeActivity"></activity>
+        <activity android:name=".ui.activity.MineOrderActivity" />
+        <activity android:name=".ui.activity.GoodsTypeActivity" />
+        <activity android:name=".ui.activity.OrderDetailActivity"></activity>
     </application>
 
 </manifest>

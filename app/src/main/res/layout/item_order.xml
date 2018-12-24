@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:id="@+id/rootView"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/order_no"
+            android:padding="@dimen/dp_10"
+            android:layout_weight="0.7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/order_status"
+            android:layout_weight="1.3"
+            android:gravity="right"
+            android:padding="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/linearlayout_underline_view"
+        android:layout_height="1dp"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/goods_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/dp_10"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        >
+        <TextView
+            android:layout_weight="1.0"
+            android:text="合计:60"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <com.aries.ui.view.radius.RadiusTextView
+            android:layout_width="wrap_content"
+            android:text="取消订单"
+            app:rv_strokeWidth="1dp"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            app:rv_radius="2.5dp"
+            android:layout_marginRight="@dimen/dp_10"
+            android:paddingTop="5dp"
+            android:textColor="@color/color_999999"
+            android:paddingBottom="5dp"
+            app:rv_strokeColor="@color/color_999999"
+            android:layout_height="wrap_content" />
+        <com.aries.ui.view.radius.RadiusTextView
+            android:layout_width="wrap_content"
+            android:text="确认收货"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            app:rv_radius="2.5dp"
+            android:textColor="@color/white"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            app:rv_backgroundColor="@color/color_02A44F"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

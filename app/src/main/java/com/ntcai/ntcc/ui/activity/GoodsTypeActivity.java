@@ -91,7 +91,6 @@ public class GoodsTypeActivity extends BaseActivity implements CheckListener, Ca
                     isMoved = true;
                     targetPosition = position;
                     setChecked(position, true);
-                    Log.d("p----11---->", String.valueOf(position));
                 }
             }
         });

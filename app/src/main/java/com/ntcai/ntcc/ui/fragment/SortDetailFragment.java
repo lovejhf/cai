@@ -92,6 +92,8 @@ public class SortDetailFragment extends BaseFragment implements CheckListener {
         rv.setAdapter(mAdapter);
         mDecoration = new ItemHeaderDecoration(getActivity(), mDatas);
         rv.addItemDecoration(mDecoration);
+//        View bannerHeder = LayoutInflater.from(getActivity()).inflate(R.layout.header_banner, null);
+//        mAdapter.addHeaderView(bannerHeder);
         mDecoration.setCheckListener(checkListener);
         mAdapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
             @Override
@@ -99,6 +101,7 @@ public class SortDetailFragment extends BaseFragment implements CheckListener {
                 callBackValue.onAddAnimal(view);
             }
         });
+
     }
 
     @Override

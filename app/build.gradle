@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: "com.mob.sdk"
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -32,6 +32,58 @@ android {
         }
         debug {
             signingConfig signingConfigs.release
+        }
+    }
+
+}
+
+
+MobSDK {
+    appKey "29714f045a5a4" //share_sdk appkey
+    appSecret "dbefc759427ee08940a399e22e2d7360"
+    PaySDK {
+        info {
+            AliPay {}
+            Wechat {}
+        }
+    }
+    MobLink {}
+    ShareSDK {
+        //平台配置信息
+        gui true
+        devInfo {
+            WechatMoments {
+                appId "wxa29bf64464dbddf4" //weChart open appkey appSecret
+                appSecret "4a44c5b8c02465023e44689005dc84f2"
+                bypassApproval false
+
+            }
+
+            WechatFavorite {
+                appId "wxa29bf64464dbddf4"
+                appSecret "4a44c5b8c02465023e44689005dc84f2"
+                bypassApproval false
+
+            }
+            Wechat {
+                appId "wxa29bf64464dbddf4"
+                appSecret "4a44c5b8c02465023e44689005dc84f2"
+            }
+//            QQ {
+//                appId "1105567638"
+//                appKey "qIfaw2xL2OcF3RJq"
+//                shareByAppClient true
+//
+//            }
+//            QZone {
+//                appId "1105567638"
+//                appKey "qIfaw2xL2OcF3RJq"
+//                bypassApproval false
+//                shareByAppClient true
+//
+//
+//            }
+
         }
     }
 

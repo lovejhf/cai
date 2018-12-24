@@ -73,6 +73,14 @@ public class MineFragment extends BaseFragment {
         super.onViewCreated(view, savedInstanceState);
         mineOrderMenu.setLayoutManager(new GridLayoutManager(getActivity(), 4));
         OrderMenuAdapter orderMenuAdapter = new OrderMenuAdapter(R.layout.item_order_status, getMenus());
+        orderMenuAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                Intent intent = new Intent(getActivity(),MineOrderActivity.class);
+                intent.putExtra("position",position+1);
+                startActivity(intent);
+            }
+        });
         mineOrderMenu.setAdapter(orderMenuAdapter);
         mineMenuList.setLayoutManager(new LinearLayoutManager(getActivity()));
         final MineMenuOrderAdapter mineMenuOrderAdapter = new MineMenuOrderAdapter(R.layout.item_mine_menu, getMineMenus());

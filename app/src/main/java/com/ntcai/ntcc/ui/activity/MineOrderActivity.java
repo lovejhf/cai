@@ -25,6 +25,7 @@ public class MineOrderActivity extends BaseActivity {
     @BindView(R.id.tab)
     SlidingTabLayout tab;
     private String[] tabMenus = {"全部","待付款","待发货","已发货","已完成"};
+    private int position;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +36,8 @@ public class MineOrderActivity extends BaseActivity {
         OrderViewPagerAdapter messageAdapter = new OrderViewPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(messageAdapter);
         tab.setViewPager(viewPager);
+        position = getIntent().getIntExtra("position",0);
+        viewPager.setCurrentItem(position);
 
     }
 

@@ -16,12 +16,11 @@
         android:background="@android:color/white"
         app:tl_indicator_color="@color/login_color"
         app:tl_indicator_height="4.5dp"
-        app:tl_indicator_margin_bottom="15dp"
         app:tl_indicator_width_equal_title="true"
         app:tl_tab_padding="15dp"
-        app:tl_tab_space_equal="false"
-        app:tl_textSelectColor="@color/home_text_color"
-        app:tl_textUnselectColor="@color/login_color"
+        app:tl_tab_space_equal="true"
+        app:tl_textSelectColor="@color/login_color"
+        app:tl_textUnselectColor="@color/home_text_color"
         />
 
     <android.support.v4.view.ViewPager
