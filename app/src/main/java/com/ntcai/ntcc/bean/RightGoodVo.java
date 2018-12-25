@@ -7,6 +7,15 @@ public class RightGoodVo implements MultiItemEntity {
     private String tag;
     private String titleName;
     private boolean isTitle;
+    private String sub;
+
+    public String getSub() {
+        return sub;
+    }
+
+    public void setSub(String sub) {
+        this.sub = sub;
+    }
 
     public boolean isTitle() {
         return isTitle;

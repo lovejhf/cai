@@ -41,6 +41,7 @@
         <activity android:name=".ui.activity.UserAccountActivity"></activity>
         <activity android:name=".ui.activity.CouponActivity"></activity>
         <activity android:name=".ui.activity.AddressActivity"></activity>
+        <activity android:name=".ui.activity.QuickFoodTypeActivity"></activity>
     </application>
 
 </manifest>

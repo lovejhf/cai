@@ -18,6 +18,7 @@
         <TextView
             android:textSize="16sp"
             android:text="分类"
+            android:drawableLeft="@mipmap/ic_quick_food_title"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

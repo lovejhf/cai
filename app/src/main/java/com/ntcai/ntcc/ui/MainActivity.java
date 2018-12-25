@@ -22,6 +22,7 @@ import com.ntcai.ntcc.R;
 import com.ntcai.ntcc.adapter.FragmentTabAdapter;
 import com.ntcai.ntcc.ui.fragment.HomeFragment;
 import com.ntcai.ntcc.ui.fragment.MineFragment;
+import com.ntcai.ntcc.ui.fragment.QuickFoodFragment;
 import com.ntcai.ntcc.ui.fragment.ShopTypeFragment;
 import com.ntcai.ntcc.ui.fragment.ShoppingCartFragment;
 
@@ -60,7 +61,7 @@ public class MainActivity extends BaseActivity implements EasyPermissions.Permis
         ButterKnife.bind(this);
         list.add(new HomeFragment());
         list.add(new ShopTypeFragment());//分类
-        list.add(new ShopTypeFragment());//菜速达
+        list.add(new QuickFoodFragment());//菜速达
         list.add(new ShoppingCartFragment());
         list.add(new MineFragment());
         tabAdapter = new FragmentTabAdapter(this, list, R.id.FrameAct_FragmentGroup, RadioGBottem);

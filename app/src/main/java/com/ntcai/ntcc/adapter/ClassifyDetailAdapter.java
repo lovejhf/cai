@@ -29,6 +29,7 @@ public class ClassifyDetailAdapter extends BaseMultiItemQuickAdapter<RightGoodVo
             case 1:
                 helper.setText(R.id.name,item.getName());
                 helper.addOnClickListener(R.id.add_cart);
+                helper.setText(R.id.sub,item.getSub());
                 break;
         }
     }

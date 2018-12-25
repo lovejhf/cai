@@ -5,241 +5,241 @@
         {
           "name": "新鲜豆角500g免费送",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_tongsufenlei_chufangyao.png",
-          "cacode": "chufangyao"
+          "sub": "美味新鲜蔬菜，新鲜健康"
         },
         {
           "name": "非处方(新鲜豆角500g免费送)",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_tongsufenlei_feichufang.png",
-          "cacode": "feichufang"
+          "sub": "美味新鲜蔬菜，新鲜健康"
         },
         {
           "name": "新鲜豆角500g免费送",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_tongsufenlei_kangshengsu.png",
-          "cacode": "kangshengsu"
+          "sub": "美味新鲜蔬菜，新鲜健康"
         },
         {
           "name": "新鲜豆角500g免费送",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_tongsufenlei_kangshengsu.png",
-          "cacode": "kangshengsu"
+          "sub": "美味新鲜蔬菜，新鲜健康"
         }
       ],
       "name": "素菜豆制",
       "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_0.png",
-      "cacode": "tongsufenlei"
+      "sub": "tongsufenlei"
     },
     {
       "categoryTwoArray": [
         {
           "name": "新鲜羊肉500g免费送",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_20_20155.png",
-          "cacode": "20155"
+          "sub": "美味新鲜蔬菜，新鲜健康"
         },
         {
           "name": "新鲜猪肉500g免费送",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_20_20154.png",
-          "cacode": "20154"
+          "sub": "美味新鲜蔬菜，新鲜健康"
         }
       ],
       "name": "猪肉羊肉",
       "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_1.png",
-      "cacode": "20"
+      "sub": "20"
     },
     {
       "categoryTwoArray": [
         {
           "name": "感冒用药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_18_18135.png",
-          "cacode": "18135"
+          "sub": "美味新鲜蔬菜，新鲜健康"
         },
         {
           "name": "心脑血管用药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_18_18149.png",
-          "cacode": "18149"
+          "sub": "美味新鲜蔬菜，新鲜健康"
         },
         {
           "name": "胃肠用药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_18_18147.png",
-          "cacode": "18147"
+          "sub": "美味新鲜蔬菜，新鲜健康"
         },
         {
           "name": "风湿骨伤用药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_18_18132.png",
-          "cacode": "18132"
+          "sub": "美味新鲜蔬菜，新鲜健康"
         },
         {
           "name": "止咳化痰平喘药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_18_18151.png",
-          "cacode": "18151"
+          "sub": "美味新鲜蔬菜，新鲜健康"
         },
         {
           "name": "清热药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_18_18143.png",
-          "cacode": "18143"
+          "sub": "美味新鲜蔬菜，新鲜健康"
         },
         {
           "name": "五官科用药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_18_18148.png",
-          "cacode": "18148"
+          "sub": "美味新鲜蔬菜，新鲜健康"
         },
         {
           "name": "滋补营养药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_18_18152.png",
-          "cacode": "18152"
+          "sub": "美味新鲜蔬菜，新鲜健康"
         },
         {
           "name": "儿科用药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_18_18131.png",
-          "cacode": "18131"
+          "sub": "美味新鲜蔬菜，新鲜健康"
         },
         {
           "name": "妇科用药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_18_18133.png",
-          "cacode": "18133"
+          "sub": "美味新鲜蔬菜，新鲜健康"
         },
         {
           "name": "皮肤用药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_18_18141.png",
-          "cacode": "18141"
+          "sub": "美味新鲜蔬菜，新鲜健康"
         },
         {
           "name": "泌尿系统用药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_18_18140.png",
-          "cacode": "18140"
+          "sub": "美味新鲜蔬菜，新鲜健康"
         },
         {
           "name": "肝胆用药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_18_18134.png",
-          "cacode": "18134"
+          "sub": "美味新鲜蔬菜，新鲜健康"
         },
         {
           "name": "血液系统用药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_18_18150.png",
-          "cacode": "18150"
+          "sub": "美味新鲜蔬菜，新鲜健康"
         },
         {
           "name": "激素和内分泌用药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_18_18136.png",
-          "cacode": "18136"
+          "sub": "18136"
         },
         {
           "name": "解热镇痛抗炎药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_18_18137.png",
-          "cacode": "18137"
+          "sub": "美味新鲜蔬菜，新鲜健康"
         },
         {
           "name": "神经系统用药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_18_18144.png",
-          "cacode": "18144"
+          "sub": "美味新鲜蔬菜，新鲜健康"
         }
 
 
       ],
       "name": "水产海鲜",
       "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_2.png",
-      "cacode": "18"
+      "sub": "18"
     },
     {
       "categoryTwoArray": [
         {
           "name": "抗微生物药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_19_19138.png",
-          "cacode": "19138"
+          "sub": "美味新鲜蔬菜，新鲜健康"
         },
         {
           "name": "心脑血管用药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_19_19149.png",
-          "cacode": "19149"
+          "sub": "美味新鲜蔬菜，新鲜健康"
         },
         {
           "name": "激素和内分泌用药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_19_19136.png",
-          "cacode": "19136"
+          "sub": "美味新鲜蔬菜，新鲜健康"
         },
         {
           "name": "胃肠用药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_19_19147.png",
-          "cacode": "19147"
+          "sub": "美味新鲜蔬菜，新鲜健康"
         },
         {
           "name": "止咳化痰平喘药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_19_19151.png",
-          "cacode": "19151"
+          "sub": "19151"
         },
         {
           "name": "皮肤用药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_19_19141.png",
-          "cacode": "19141"
+          "sub": "19141"
         },
         {
           "name": "解热镇痛抗炎药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_19_19137.png",
-          "cacode": "19137"
+          "sub": "19137"
         },
         {
           "name": "五官科用药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_19_19148.png",
-          "cacode": "19148"
+          "sub": "19148"
         },
         {
           "name": "维生素矿物质药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_19_19146.png",
-          "cacode": "19146"
+          "sub": "19146"
         },
         {
           "name": "儿科用药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_19_19131.png",
-          "cacode": "19131"
+          "sub": "19131"
         },
         {
           "name": "神经系统用药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_19_19144.png",
-          "cacode": "19144"
+          "sub": "19144"
         },
         {
           "name": "泌尿系统用药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_19_19140.png",
-          "cacode": "19140"
+          "sub": "19140"
         },
         {
           "name": "调节水、电解质及酸碱平衡药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_19_19145.png",
-          "cacode": "19145"
+          "sub": "19145"
         },
         {
           "name": "感冒用药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_19_19135.png",
-          "cacode": "19135"
+          "sub": "19135"
         },
         {
           "name": "滋补营养药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_19_19152.png",
-          "cacode": "19152"
+          "sub": "19152"
         },
         {
           "name": "肝胆用药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_19_19134.png",
-          "cacode": "19134"
+          "sub": "19134"
         },
         {
           "name": "妇科用药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_19_19133.png",
-          "cacode": "19133"
+          "sub": "19133"
         },
         {
           "name": "风湿骨伤用药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_19_19132.png",
-          "cacode": "19132"
+          "sub": "19132"
         },
         {
           "name": "血液系统用药",
           "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_19_19150.png",
-          "cacode": "19150"
+          "sub": "19150"
         }
 
       ],
       "name": "家禽蛋类",
       "imgsrc": "https://121.10.217.171:9002/_ui/desktop/common/cmyy/image/app_3.png",
-      "cacode": "19"
+      "sub": "19"
     }
   ]
 }

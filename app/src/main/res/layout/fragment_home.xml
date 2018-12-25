@@ -1,9 +1,212 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
-   <com.youth.banner.Banner
-       android:id="@+id/banner"
-       android:layout_width="match_parent"
-       android:layout_height="160dp"/>
+
+    <com.ntcai.ntcc.view.ObservableScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/nest_scroll_view"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="160dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="wrap_content">
+
+
+
+            </RelativeLayout>
+            <android.support.v7.widget.RecyclerView
+                android:paddingTop="20dp"
+                android:layout_width="match_parent"
+                android:nestedScrollingEnabled="false"
+                android:background="@color/white"
+                android:id="@+id/type_menu"
+                android:layout_height="wrap_content"/>
+                    <ImageView
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:src="@mipmap/ic_home_banner"
+                        android:scaleType="fitXY"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:text="每日精选"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:padding="@dimen/dp_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/color_999999"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="良心优选"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="更多 〉"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:gravity="center"
+                    android:paddingTop="2.5dp"
+                    android:paddingBottom="2.5dp"
+                    android:textColor="@color/white"
+                    android:paddingRight="5dp"
+                    android:background="@drawable/more"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/day_selected"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_height="wrap_content"/>
+
+            </android.support.v7.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:text="限时促销"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:padding="@dimen/dp_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/color_999999"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="良心优选"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:text="- 分类精选 -"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="@dimen/dp_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:text="精选各类优质商品"
+                android:textColor="@color/color_999999"
+                android:textSize="10sp"
+                android:paddingBottom="@dimen/dp_10"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_marginTop="@dimen/dp_10"
+                android:src="@mipmap/ic_home_banner_01"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/type_selected_list"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_height="wrap_content"/>
+
+            </android.support.v7.widget.CardView>
+            <TextView
+                android:text="- 猜你喜欢 -"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="@dimen/dp_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:text="您的选择 我们最懂"
+                android:textColor="@color/color_999999"
+                android:textSize="10sp"
+                android:paddingBottom="@dimen/dp_10"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                app:cardBackgroundColor="@color/white"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.RecyclerView
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:id="@+id/goods_cart_list"
+                    android:layout_height="wrap_content"/>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </com.ntcai.ntcc.view.ObservableScrollView>
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:paddingBottom="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.aries.ui.view.radius.RadiusTextView
+            android:layout_width="match_parent"
+            android:id="@+id/location"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_weight="1.2"
+            android:drawableLeft="@mipmap/ic_location_white"
+            android:drawableRight="@mipmap/ic_home_down"
+            android:drawablePadding="@dimen/dp_10"
+            android:padding="@dimen/dp_10"
+            android:text="学士府东北区"
+            android:textColor="@color/white"
+            app:rv_backgroundColor="@color/color_4D000000"
+            app:rv_radius="25dp" />
+
+        <com.aries.ui.view.radius.RadiusTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_view"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:text="鲜奶"
+            android:textColor="@color/color_999999"
+            app:rv_backgroundColor="@color/white"
+            app:rv_radius="25dp" />
+
+    </LinearLayout>
 </RelativeLayout>

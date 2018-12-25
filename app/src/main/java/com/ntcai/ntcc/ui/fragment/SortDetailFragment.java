@@ -83,6 +83,7 @@ public class SortDetailFragment extends BaseFragment implements CheckListener {
             for (int j = 0; j < categoryTwoArray.size(); j++) {
                 RightGoodVo body = new RightGoodVo(categoryTwoArray.get(j).getName());
                 body.setTag(String.valueOf(i));
+                body.setSub(categoryTwoArray.get(j).getSub());
                 String name = rightList.get(i).getName();
                 body.setTitleName(name);
                 mDatas.add(body);
