@@ -13,9 +13,12 @@
     <color name="color_02C761">#02C761</color>
     <color name="color_D8D8D8">#D8D8D8</color>
     <color name="color_FF8136">#FF8136</color>
-    <color name="color_EA4C24">#EA4C24</color>
     <color name="color_D0021B">#D0021B</color>
     <color name="divider">#999</color>
     <color name="color_FFEEEEEE">#FFEEEEEE</color>
     <color name="color_4D000000">#4D000000</color>
+    <color name="color_ff000000">#ff000000</color>
+
+    <color name="color_26EA4C24">#26EA4C24</color>
+    <color name="color_EA4C24">#EA4C24</color>
 </resources>

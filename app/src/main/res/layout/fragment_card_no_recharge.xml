@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+    <EditText
+        android:layout_width="match_parent"
+        android:background="#FFF5F5F5"
+        android:padding="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:hint="输入12位菜菜卡充值密码"
+        android:layout_height="wrap_content" />
+    <com.aries.ui.view.radius.RadiusTextView
+        app:rv_backgroundColor="#EA4C24"
+        android:text="充值"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
