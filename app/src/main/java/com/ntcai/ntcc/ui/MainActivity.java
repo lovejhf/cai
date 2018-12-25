@@ -59,7 +59,8 @@ public class MainActivity extends BaseActivity implements EasyPermissions.Permis
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         list.add(new HomeFragment());
-        list.add(new ShopTypeFragment());
+        list.add(new ShopTypeFragment());//分类
+        list.add(new ShopTypeFragment());//菜速达
         list.add(new ShoppingCartFragment());
         list.add(new MineFragment());
         tabAdapter = new FragmentTabAdapter(this, list, R.id.FrameAct_FragmentGroup, RadioGBottem);
@@ -72,7 +73,7 @@ public class MainActivity extends BaseActivity implements EasyPermissions.Permis
                         if (isChecked) {
                             if (buttonView.getText().toString().trim().equals("首页")||buttonView.getText().toString().trim().equals("购物车")) {
                                 setAnimal(buttonView);
-                            } else {
+                            } else if (buttonView.getText().toString().trim().equals("分类")||buttonView.getText().toString().trim().equals("我的")){
                                 setAnimalY(buttonView);
                             }
                         }

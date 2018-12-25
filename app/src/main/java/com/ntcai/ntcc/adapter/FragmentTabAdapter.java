@@ -21,8 +21,8 @@ public class FragmentTabAdapter implements View.OnClickListener {
     private FragmentActivity fragmentActivity; // Fragment所属的Activity
     private int fragmentContentId; // Activity中所要被替换的区域的id
     private int currentTab; // 当前Tab页面索引
-    int[] un_checked_draw = new int[]{R.mipmap.ic_home, R.mipmap.ic_home_2, R.mipmap.ic_home_cart, R.mipmap.ic_mine};
-    int[] checked_draw = new int[]{R.mipmap.ic_home_n, R.mipmap.ic_home_2_n, R.mipmap.ic_home_cart_n, R.mipmap.ic_mine_n};
+    int[] un_checked_draw = new int[]{R.mipmap.ic_home, R.mipmap.ic_home_2, R.mipmap.ic_launcher,R.mipmap.ic_home_cart, R.mipmap.ic_mine};
+    int[] checked_draw = new int[]{R.mipmap.ic_home_n, R.mipmap.ic_home_2_n,R.mipmap.ic_launcher, R.mipmap.ic_home_cart_n, R.mipmap.ic_mine_n};
 
     private boolean isLogin = false;
 
@@ -38,7 +38,7 @@ public class FragmentTabAdapter implements View.OnClickListener {
         ft.add(fragmentContentId, fragments.get(0));
         ft.commit();
         setCheckedDrawTop(0);
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 5; i++) {
             rgs.getChildAt(i).setOnClickListener(this);
 
         }
@@ -54,7 +54,7 @@ public class FragmentTabAdapter implements View.OnClickListener {
         index = getIndex(v.getId());
         before = index;
         if (isLogin){
-            if (index == 2 || index == 3 ) {
+            if (index == 3 || index == 4 ) {
                 Intent intent = new Intent(fragmentActivity, LoginActivity.class);
                 fragmentActivity.startActivity(intent);
                 fragmentActivity.overridePendingTransition(R.anim.bottom_in,R.anim.bottom_silent);
@@ -73,7 +73,7 @@ public class FragmentTabAdapter implements View.OnClickListener {
     }
 
     public void setCheckedDrawTop(int index) {
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 5; i++) {
             RadioButton rb = (RadioButton) rgs.getChildAt(i);
             if (i == index) {
                 Drawable drawable = fragmentActivity.getResources().getDrawable(checked_draw[i]);
@@ -84,6 +84,16 @@ public class FragmentTabAdapter implements View.OnClickListener {
                 rb.setCompoundDrawablesWithIntrinsicBounds(null, drawable, null, null);
                 rb.setTextColor(fragmentActivity.getResources().getColor(R.color.color_D8D8D8));
             }
+//            if (i!=2){
+//
+//            }else {
+//                if (i == index) {
+//                    rb.setTextColor(fragmentActivity.getResources().getColor(R.color.color_02A44F));
+//                } else {
+//                    rb.setTextColor(fragmentActivity.getResources().getColor(R.color.color_D8D8D8));
+//                }
+//            }
+
         }
     }
 
@@ -105,12 +115,14 @@ public class FragmentTabAdapter implements View.OnClickListener {
         switch (checkedId) {
             case R.id.tab_home:
                 return 0;
-            case R.id.tab_find:
+            case R.id.tab_type:
                 return 1;
-            case R.id.tab_cart:
+            case R.id.tab_find:
                 return 2;
-            case R.id.tab_mine:
+            case R.id.tab_cart:
                 return 3;
+            case R.id.tab_mine:
+                return 4;
         }
         return 0;
     }

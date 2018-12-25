@@ -38,6 +38,9 @@
         <activity android:name=".ui.activity.MineOrderActivity" />
         <activity android:name=".ui.activity.GoodsTypeActivity" />
         <activity android:name=".ui.activity.OrderDetailActivity"></activity>
+        <activity android:name=".ui.activity.UserAccountActivity"></activity>
+        <activity android:name=".ui.activity.CouponActivity"></activity>
+        <activity android:name=".ui.activity.AddressActivity"></activity>
     </application>
 
 </manifest>

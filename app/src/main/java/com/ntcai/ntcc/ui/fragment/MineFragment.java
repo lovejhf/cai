@@ -25,9 +25,12 @@ import com.ntcai.ntcc.R;
 import com.ntcai.ntcc.adapter.MineMenuOrderAdapter;
 import com.ntcai.ntcc.adapter.OrderMenuAdapter;
 import com.ntcai.ntcc.bean.MineOrderVo;
+import com.ntcai.ntcc.ui.activity.AddressActivity;
+import com.ntcai.ntcc.ui.activity.CouponActivity;
 import com.ntcai.ntcc.ui.activity.MessageActivity;
 import com.ntcai.ntcc.ui.activity.MineOrderActivity;
 import com.ntcai.ntcc.ui.activity.SettingActivity;
+import com.ntcai.ntcc.ui.activity.UserAccountActivity;
 import com.ntcai.ntcc.view.ItemPositionDecoration;
 import com.zrq.spanbuilder.Spans;
 
@@ -97,10 +100,16 @@ public class MineFragment extends BaseFragment {
                 Intent intent = null;
                 switch (mineMenuOrderAdapter.getData().get(position).getName()) {
                     case "我的账户":
+                        intent = new Intent(getActivity(),UserAccountActivity.class);
+                        startActivity(intent);
                         break;
                     case "优惠券":
+                        intent = new Intent(getActivity(),CouponActivity.class);
+                        startActivity(intent);
                         break;
                     case "地址管理":
+                        intent = new Intent(getActivity(),AddressActivity.class);
+                        startActivity(intent);
                         break;
                     case "邀请好友":
                         break;

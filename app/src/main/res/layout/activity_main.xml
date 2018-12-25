@@ -1,13 +1,15 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clipChildren="false"
     >
 
     <FrameLayout
         android:id="@+id/FrameAct_FragmentGroup"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/line"
+        android:layout_weight="1.0"
         />
     <View
         android:id="@+id/line"
@@ -18,33 +20,44 @@
     <RadioGroup
         android:id="@+id/RadioG_Bottem"
         android:layout_width="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:background="#fff"
-        android:orientation="horizontal"
-        android:paddingTop="5dp"
+        android:orientation="horizontal" >
 
-        >
         <RadioButton
             android:id="@+id/tab_home"
             style="@style/main_bottom_tab_style"
-            android:checked="true"
-            android:text="首页" />
+            android:text="首页"
+            />
+
         <RadioButton
+            android:id="@+id/tab_type"
+            android:text="分类"
+            style="@style/main_bottom_tab_style"
+            />
+
+
+        <RadioButton
+            android:layout_height="75dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1.0"
+            style="@style/main_bottom_tab_style"
             android:id="@+id/tab_find"
-            style="@style/main_bottom_tab_style"
-            android:text="菜速达" />
-
-
+            android:text="菜速达"
+            android:drawableTop="@mipmap/ic_launcher"
+            />
         <RadioButton
+            style="@style/main_bottom_tab_style"
+            android:text="购物车"
             android:id="@+id/tab_cart"
-            style="@style/main_bottom_tab_style"
-            android:text="购物车" />
+            />
+
 
         <RadioButton
-            android:id="@+id/tab_mine"
             style="@style/main_bottom_tab_style"
-            android:text="我的" />
-    </RadioGroup>
+            android:id="@+id/tab_mine"
+            android:text="我的"
+            />
 
-</RelativeLayout>
+    </RadioGroup>
+</LinearLayout>
