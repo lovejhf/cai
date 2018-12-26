@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.GoodsDetailActivity">
+    <com.ntcai.ntcc.view.ObservableScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_marginBottom="50dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/linearlayout_top_view"
+                >
+                <TextView
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:padding="@dimen/dp_10"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/color_3C2E25"
+                    android:text="大红硬果 弧三以上 货真价实"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/color_B2B2B2"
+                    android:textSize="11sp"
+                    android:text="著名品牌 原装进口 优选品质"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/dp_10"
+                    android:text="￥2.5/斤"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                >
+                <com.aries.ui.view.radius.RadiusTextView
+                    android:textSize="11sp"
+                    app:rv_backgroundColor="@color/color_FF8300"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_10"
+                    android:paddingTop="2.5dp"
+                    android:paddingBottom="2.5dp"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    app:rv_radius="2.5dp"
+                    android:text="折扣"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_weight="1.0"
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/dp_10"
+                    android:text="50斤起拼，1W斤成团"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/linearlayout_top_view"
+                >
+                <com.aries.ui.view.radius.RadiusTextView
+                    android:textSize="11sp"
+                    app:rv_backgroundColor="@color/color_4A90E2"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_10"
+                    android:paddingTop="2.5dp"
+                    android:paddingBottom="2.5dp"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    app:rv_radius="2.5dp"
+                    android:text="折扣"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_weight="1.0"
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/dp_10"
+                    android:text="满30元，免配送费"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="@color/white"
+                    android:text="已选择：250g"
+                    android:padding="@dimen/dp_10"
+                    android:drawableRight="@mipmap/ic_left_more"
+                    android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="vertical"
+                >
+                <com.ntcai.ntcc.view.TextViewLine
+                    android:layout_width="match_parent"
+                    android:text="详细规格"
+                    android:textSize="@dimen/sp_16"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10"
+                    app:line_color="@color/color_02C761"
+                    android:layout_height="wrap_content" />
+                <com.tencent.smtt.sdk.WebView
+                    android:layout_width="match_parent"
+                    android:id="@+id/webView"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </com.ntcai.ntcc.view.ObservableScrollView>
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bar_transparent"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_margin="@dimen/dp_10"
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:padding="@dimen/dp_10"
+            android:id="@+id/name"
+            android:textSize="@dimen/sp_16"
+            android:text="订单确认"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/cart"
+            android:layout_margin="@dimen/dp_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@mipmap/ic_goods_share"
+            android:layout_width="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="加入购物车"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:background="#F5A623"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_weight="1.0"
+            android:textColor="@color/white"
+            android:background="@color/color_02C761"
+            android:padding="@dimen/dp_10"
+            android:layout_gravity="center_vertical"
+            android:text="立即购买"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</RelativeLayout>

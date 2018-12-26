@@ -26,7 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.MobileQuickLoginActivity"></activity>
+        <activity android:name=".ui.activity.MobileQuickLoginActivity" />
         <activity android:name=".ui.activity.WeChartCheckMobile" />
         <activity android:name=".ui.activity.SettingPassWordActivity" />
         <activity android:name=".ui.activity.FindPassWordActivity" />
@@ -37,11 +37,13 @@
         <activity android:name=".ui.activity.MessageActivity" />
         <activity android:name=".ui.activity.MineOrderActivity" />
         <activity android:name=".ui.activity.GoodsTypeActivity" />
-        <activity android:name=".ui.activity.OrderDetailActivity"></activity>
-        <activity android:name=".ui.activity.UserAccountActivity"></activity>
-        <activity android:name=".ui.activity.CouponActivity"></activity>
-        <activity android:name=".ui.activity.AddressActivity"></activity>
-        <activity android:name=".ui.activity.QuickFoodTypeActivity"></activity>
+        <activity android:name=".ui.activity.OrderDetailActivity" />
+        <activity android:name=".ui.activity.UserAccountActivity" />
+        <activity android:name=".ui.activity.CouponActivity" />
+        <activity android:name=".ui.activity.AddressActivity" />
+        <activity android:name=".ui.activity.QuickFoodTypeActivity" />
+        <activity android:name=".ui.activity.AccountDetailActivity" />
+        <activity android:name=".ui.activity.GoodsDetailActivity"></activity>
     </application>
 
 </manifest>

@@ -1,14 +1,17 @@
 package com.ntcai.ntcc.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.View;
 
 import com.flyco.tablayout.SegmentTabLayout;
 import com.flyco.tablayout.listener.OnTabSelectListener;
+import com.hjq.bar.OnTitleBarListener;
 import com.hjq.bar.TitleBar;
 import com.ntcai.ntcc.BaseActivity;
 import com.ntcai.ntcc.R;
@@ -36,6 +39,23 @@ public class UserAccountActivity extends BaseActivity {
         setContentView(R.layout.activity_user_account);
         ButterKnife.bind(this);
         initToolBar(title, "我的账户", "账户明细");
+        title.setOnTitleBarListener(new OnTitleBarListener() {
+            @Override
+            public void onLeftClick(View v) {
+                finish();
+            }
+
+            @Override
+            public void onTitleClick(View v) {
+
+            }
+
+            @Override
+            public void onRightClick(View v) {
+                Intent intent = new Intent(UserAccountActivity.this,AccountDetailActivity.class);
+                startActivity(intent);
+            }
+        });
         tabLayout.setTabData(mTitles);
         mFragments.add(new OnLineRechargeFragment());
         mFragments.add(new CardNoRechargeFragment());

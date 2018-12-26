@@ -1,5 +1,6 @@
 package com.ntcai.ntcc.ui.fragment;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.aries.ui.view.radius.RadiusTextView;
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.gyf.barlibrary.ImmersionBar;
 import com.ntcai.ntcc.BaseFragment;
 import com.ntcai.ntcc.R;
@@ -23,6 +25,7 @@ import com.ntcai.ntcc.adapter.HomeGoodAdapter;
 import com.ntcai.ntcc.adapter.OrderMenuAdapter;
 import com.ntcai.ntcc.bean.GoodsVo;
 import com.ntcai.ntcc.glide.GlideImageLoader;
+import com.ntcai.ntcc.ui.activity.GoodsDetailActivity;
 import com.ntcai.ntcc.util.ItemDecorationDivider;
 import com.ntcai.ntcc.view.ObservableScrollView;
 import com.youth.banner.Banner;
@@ -94,6 +97,13 @@ public class HomeFragment extends BaseFragment {
 
         HomeGoodAdapter daySeleted = new HomeGoodAdapter(R.layout.item_day_selected_good, getGoods1());
         daySelected.setAdapter(daySeleted);
+        daySeleted.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                Intent intent = new Intent(getActivity(),GoodsDetailActivity.class);
+                startActivity(intent);
+            }
+        });
         goodsCartList.setLayoutManager(new LinearLayoutManager(getActivity()));
         goodsCartList.addItemDecoration(new ItemDecorationDivider(getActivity(), ItemDecorationDivider.VERTICAL_LIST, 1, ContextCompat.getColor(getActivity(), R.color.divider)));
         HomeGoodAdapter adapter = new HomeGoodAdapter(R.layout.item_classify_detail, getGoods());
