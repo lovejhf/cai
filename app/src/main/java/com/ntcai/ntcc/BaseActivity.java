@@ -1,9 +1,12 @@
 package com.ntcai.ntcc;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.os.SystemClock;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
@@ -16,13 +19,15 @@ import com.hjq.bar.TitleBar;
 import com.mcxiaoke.bus.Bus;
 import com.ntcai.ntcc.util.AppManager;
 
+import butterknife.internal.Utils;
 import me.yokeyword.fragmentation.SwipeBackLayout;
 import me.yokeyword.fragmentation_swipeback.SwipeBackActivity;
 
 public class BaseActivity extends SwipeBackActivity {
     protected View existView;
     public ImmersionBar mImmersionBar;
-
+    private String mStartActivityTag;
+    private long mStartActivityTime;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,7 +74,7 @@ public class BaseActivity extends SwipeBackActivity {
 
             @Override
             public void onLeftClick(View v) {
-                finish();
+                onBackPressedSupport();
             }
 
             @Override
@@ -90,6 +95,14 @@ public class BaseActivity extends SwipeBackActivity {
                 finish();
             default:
                 return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    public void startActivityForResult(Intent intent, int requestCode, @Nullable Bundle options) {
+        if (startActivitySelfCheck(intent)) {
+            // 查看源码得知 startActivity 最终也会调用 startActivityForResult
+            super.startActivityForResult(intent, requestCode, options);
         }
     }
 
@@ -128,6 +141,12 @@ public class BaseActivity extends SwipeBackActivity {
         }
     }
 
+    @Override
+    public void onBackPressedSupport() {
+        super.onBackPressedSupport();
+        ActivityCompat.finishAfterTransition(this);
+        finish();
+    }
 
     public void hideKeyboard() {
         InputMethodManager imm = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -141,5 +160,28 @@ public class BaseActivity extends SwipeBackActivity {
             }
 
         }
+    }
+
+    protected boolean startActivitySelfCheck(Intent intent) {
+        // 默认检查通过
+        boolean result = true;
+        // 标记对象
+        String tag;
+        if (intent.getComponent() != null) { // 显式跳转
+            tag = intent.getComponent().getClassName();
+        }else if (intent.getAction() != null) { // 隐式跳转
+            tag = intent.getAction();
+        }else { // 其他方式
+            return result;
+        }
+
+        if (tag.equals(mStartActivityTag) && mStartActivityTime >= SystemClock.uptimeMillis() - 500) {
+            // 检查不通过
+            result = false;
+        }
+
+        mStartActivityTag = tag;
+        mStartActivityTime = SystemClock.uptimeMillis();
+        return result;
     }
 }
