@@ -28,6 +28,7 @@ import com.ntcai.ntcc.bean.MineOrderVo;
 import com.ntcai.ntcc.ui.activity.AddressActivity;
 import com.ntcai.ntcc.ui.activity.CouponActivity;
 import com.ntcai.ntcc.ui.activity.MessageActivity;
+import com.ntcai.ntcc.ui.activity.MineIntegralActivity;
 import com.ntcai.ntcc.ui.activity.MineOrderActivity;
 import com.ntcai.ntcc.ui.activity.SettingActivity;
 import com.ntcai.ntcc.ui.activity.UserAccountActivity;
@@ -117,6 +118,10 @@ public class MineFragment extends BaseFragment {
                         break;
                     case "意见反馈":
                         break;
+                    case "我的积分":
+                        intent= new Intent(getActivity(),MineIntegralActivity.class);
+                        startActivity(intent);
+                        break;
                     case "设置":
                         intent = new Intent(getActivity(), SettingActivity.class);
                         startActivity(intent);
@@ -146,6 +151,7 @@ public class MineFragment extends BaseFragment {
     private List<MineOrderVo> getMineMenus() {
         List<MineOrderVo> menus = new ArrayList<>();
         menus.add(new MineOrderVo(R.mipmap.ic_mine_account, "我的账户", "1000"));
+        menus.add(new MineOrderVo(R.mipmap.ic_mine_integral, "我的积分", "1000"));
         menus.add(new MineOrderVo(R.mipmap.ic_mine_coupon, "优惠券", ""));
         menus.add(new MineOrderVo(R.mipmap.ic_mine_address, "地址管理", ""));
         menus.add(new MineOrderVo(R.mipmap.ic_mine_invite_frind, "邀请好友", "邀请好友享优惠"));

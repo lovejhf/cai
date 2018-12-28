@@ -9,9 +9,9 @@ public class ItemPositionDecoration extends RecyclerView.ItemDecoration {
     public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
         super.getItemOffsets(outRect, view, parent, state);
         int pos = parent.getChildAdapterPosition(view);
-        if (pos == 3) {
+        if (pos == 4) {
             outRect.top = 20;
-        }else if (pos==6){
+        }else if (pos==7){
             outRect.top = 20;
         }
     }

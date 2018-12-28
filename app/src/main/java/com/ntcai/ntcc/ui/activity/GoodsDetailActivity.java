@@ -47,7 +47,7 @@ public class GoodsDetailActivity extends BaseActivity {
         setContentView(R.layout.activity_goods_detail);
         ButterKnife.bind(this);
         ImmersionBar.setTitleBar(this, title);
-        webView.loadUrl("https://blog.csdn.net/valada/article/details/85231526");
+//        webView.loadUrl("https://blog.csdn.net/valada/article/details/85231526");
         images.add("https://yunzc.oss-cn-hangzhou.aliyuncs.com/hd/banner.png");
         images.add("https://yunzc.oss-cn-hangzhou.aliyuncs.com/hd/banner.png");
         banner.setIndicatorGravity(BannerConfig.RIGHT);
@@ -58,7 +58,7 @@ public class GoodsDetailActivity extends BaseActivity {
         banner.start();
         back.setBackgroundResource(R.mipmap.ic_goods_detail_back);
         name.setTextColor(Color.WHITE);
-        back.setBackgroundResource(R.mipmap.ic_goods_shop_cart);
+        cart.setBackgroundResource(R.mipmap.ic_goods_shop_cart);
         scrollView.setScrollViewListener(new ObservableScrollView.ScrollViewListener() {
             @Override
             public void onScrollChanged(int x, int y, int oldx, int oldy) {

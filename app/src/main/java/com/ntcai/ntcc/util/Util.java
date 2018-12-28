@@ -18,6 +18,7 @@ public class Util {
         return numString;
 
     }
+
     public static List<Pair<String,Integer>> getPayType(){
         List<Pair<String,Integer>> pay = new ArrayList<>();
         pay.add(new Pair<>("支付宝支付", R.mipmap.ic_ali_pay));

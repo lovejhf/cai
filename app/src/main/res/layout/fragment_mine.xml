@@ -78,11 +78,16 @@
         android:layout_width="match_parent"
         android:id="@+id/mine_order_menu"
         android:layout_height="wrap_content"/>
+        <ImageView
+            android:src="@mipmap/ic_mine_banner"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     <android.support.v7.widget.RecyclerView
         android:id="@+id/mine_menu_list"
         android:nestedScrollingEnabled="false"
         android:layout_marginBottom="@dimen/dp_10"
-        android:layout_marginTop="@dimen/dp_10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     </LinearLayout>

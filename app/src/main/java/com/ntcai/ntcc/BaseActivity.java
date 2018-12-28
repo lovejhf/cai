@@ -21,6 +21,8 @@ import com.ntcai.ntcc.util.AppManager;
 
 import butterknife.internal.Utils;
 import me.yokeyword.fragmentation.SwipeBackLayout;
+import me.yokeyword.fragmentation.anim.DefaultHorizontalAnimator;
+import me.yokeyword.fragmentation.anim.FragmentAnimator;
 import me.yokeyword.fragmentation_swipeback.SwipeBackActivity;
 
 public class BaseActivity extends SwipeBackActivity {
@@ -140,12 +142,15 @@ public class BaseActivity extends SwipeBackActivity {
             manager.hideSoftInputFromWindow(token, InputMethodManager.HIDE_NOT_ALWAYS);
         }
     }
-
     @Override
     public void onBackPressedSupport() {
         super.onBackPressedSupport();
-        ActivityCompat.finishAfterTransition(this);
         finish();
+    }
+
+    @Override
+    public FragmentAnimator getFragmentAnimator() {
+        return new DefaultHorizontalAnimator();
     }
 
     public void hideKeyboard() {

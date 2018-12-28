@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+        <com.hjq.bar.TitleBar
+            android:layout_width="match_parent"
+            app:title="我的积分"
+            android:id="@+id/title"
+            app:color_title="@color/white"
+            app:icon_left="@mipmap/bar_icon_back_white"
+            app:line_color="@color/bar_transparent"
+            android:background="@color/bar_transparent"
+            android:layout_height="wrap_content"/>
+</RelativeLayout>
