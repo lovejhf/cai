@@ -26,6 +26,7 @@ import com.ntcai.ntcc.adapter.OrderMenuAdapter;
 import com.ntcai.ntcc.bean.GoodsVo;
 import com.ntcai.ntcc.glide.GlideImageLoader;
 import com.ntcai.ntcc.ui.activity.GoodsDetailActivity;
+import com.ntcai.ntcc.ui.activity.SearchActivity;
 import com.ntcai.ntcc.util.ItemDecorationDivider;
 import com.ntcai.ntcc.view.ObservableScrollView;
 import com.youth.banner.Banner;
@@ -36,6 +37,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.Unbinder;
 
 
@@ -100,7 +102,7 @@ public class HomeFragment extends BaseFragment {
         daySeleted.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                Intent intent = new Intent(getActivity(),GoodsDetailActivity.class);
+                Intent intent = new Intent(getActivity(), GoodsDetailActivity.class);
                 startActivity(intent);
             }
         });
@@ -108,11 +110,11 @@ public class HomeFragment extends BaseFragment {
         goodsCartList.addItemDecoration(new ItemDecorationDivider(getActivity(), ItemDecorationDivider.VERTICAL_LIST, 1, ContextCompat.getColor(getActivity(), R.color.divider)));
         HomeGoodAdapter adapter = new HomeGoodAdapter(R.layout.item_classify_detail, getGoods());
         goodsCartList.setAdapter(adapter);
-        final Drawable location_grey =getResources().getDrawable(R.mipmap.ic_location);
-        final Drawable location_white =getResources().getDrawable(R.mipmap.ic_location_white);
+        final Drawable location_grey = getResources().getDrawable(R.mipmap.ic_location);
+        final Drawable location_white = getResources().getDrawable(R.mipmap.ic_location_white);
 
-        final Drawable down_grey =getResources().getDrawable(R.mipmap.ic_home_down_grey);
-        final Drawable down_white =getResources().getDrawable(R.mipmap.ic_home_down);
+        final Drawable down_grey = getResources().getDrawable(R.mipmap.ic_home_down_grey);
+        final Drawable down_white = getResources().getDrawable(R.mipmap.ic_home_down);
         nestScrollView.setScrollViewListener(new ObservableScrollView.ScrollViewListener() {
             @Override
             public void onScrollChanged(int x, int y, int oldx, int oldy) {
@@ -120,7 +122,7 @@ public class HomeFragment extends BaseFragment {
                     location.setCompoundDrawablesWithIntrinsicBounds(location_white, null, down_white, null);
                     title.setBackgroundColor(Color.TRANSPARENT);
                     searchView.getDelegate().setBackgroundColor(Color.WHITE);
-                    location.getDelegate().setBackgroundColor(ContextCompat.getColor(getActivity(),R.color.color_4D000000));
+                    location.getDelegate().setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.color_4D000000));
                     location.setTextColor(Color.WHITE);
                 } else if (y > 0 && y < mHeight) {
                     float scale = (float) y / mHeight;//算出滑动距离比例
@@ -130,8 +132,8 @@ public class HomeFragment extends BaseFragment {
                 } else {
                     title.setBackgroundColor(Color.argb(255, 255, 255, 255));
                     location.getDelegate().setBackgroundColor(Color.WHITE);
-                    searchView.getDelegate().setBackgroundColor(ContextCompat.getColor(getActivity(),R.color.color_FFEEEEEE));
-                    location.setTextColor(ContextCompat.getColor(getActivity(),R.color.home_text_color));
+                    searchView.getDelegate().setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.color_FFEEEEEE));
+                    location.setTextColor(ContextCompat.getColor(getActivity(), R.color.home_text_color));
                     location.setCompoundDrawablesWithIntrinsicBounds(location_grey, null, down_grey, null);
                 }
             }
@@ -175,5 +177,18 @@ public class HomeFragment extends BaseFragment {
         goodsVos.add(new GoodsVo("绿地蔬菜", "350g/份", 1, 1, "https://yunzc.oss-cn-hangzhou.aliyuncs.com/hd/banner.png", 2));
         goodsVos.add(new GoodsVo("绿地蔬菜", "350g/份", 1, 1, "https://yunzc.oss-cn-hangzhou.aliyuncs.com/hd/banner.png", 2));
         return goodsVos;
+    }
+
+    @OnClick({R.id.location, R.id.search_view})
+    public void onViewClicked(View view) {
+        Intent intent =null;
+        switch (view.getId()) {
+            case R.id.location:
+                break;
+            case R.id.search_view:
+                intent = new Intent(getActivity(),SearchActivity.class);
+                startActivity(intent);
+                break;
+        }
     }
 }

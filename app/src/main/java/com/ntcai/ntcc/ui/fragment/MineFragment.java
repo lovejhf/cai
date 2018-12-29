@@ -89,7 +89,7 @@ public class MineFragment extends BaseFragment {
         mineMenuList.setLayoutManager(new LinearLayoutManager(getActivity()));
         final MineMenuOrderAdapter mineMenuOrderAdapter = new MineMenuOrderAdapter(R.layout.item_mine_menu, getMineMenus());
         mineMenuList.setAdapter(mineMenuOrderAdapter);
-        mineMenuList.addItemDecoration(new ItemPositionDecoration());
+        mineMenuList.addItemDecoration(new ItemPositionDecoration(4,7));
         ImmersionBar.setTitleBar(getActivity(), toolBarLayout);
         Spannable spannable = Spans.builder().text("userName", 16, Color.WHITE)
                 .text("\n187****0068", 12, Color.WHITE).build();

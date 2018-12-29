@@ -25,4 +25,5 @@
     <declare-styleable name="TextViewVerticalLine">
         <attr name="line_color" format="color" />
     </declare-styleable>
+
 </resources>

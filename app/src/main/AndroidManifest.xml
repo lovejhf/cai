@@ -43,8 +43,11 @@
         <activity android:name=".ui.activity.AddressActivity" />
         <activity android:name=".ui.activity.QuickFoodTypeActivity" />
         <activity android:name=".ui.activity.AccountDetailActivity" />
-        <activity android:name=".ui.activity.GoodsDetailActivity"></activity>
-        <activity android:name=".ui.activity.MineIntegralActivity"/>
+        <activity android:name=".ui.activity.GoodsDetailActivity" />
+        <activity android:name=".ui.activity.MineIntegralActivity" />
+        <activity android:name=".ui.activity.OrderConfirmActivity"></activity>
+        <activity android:name=".ui.activity.SearchActivity"></activity>
+        <activity android:name=".ui.activity.GoodsSerachListActivity"></activity>
     </application>
 
 </manifest>

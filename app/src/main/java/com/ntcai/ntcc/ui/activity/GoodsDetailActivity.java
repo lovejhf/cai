@@ -1,8 +1,9 @@
 package com.ntcai.ntcc.ui.activity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -21,6 +22,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class GoodsDetailActivity extends BaseActivity {
 
@@ -38,6 +40,12 @@ public class GoodsDetailActivity extends BaseActivity {
     TextView name;
     @BindView(R.id.cart)
     ImageView cart;
+    @BindView(R.id.share)
+    ImageView share;
+    @BindView(R.id.add_cart)
+    TextView addCart;
+    @BindView(R.id.buy)
+    TextView buy;
     private List<String> images = new ArrayList<>();
     private int mHeight = 400;
 
@@ -81,4 +89,23 @@ public class GoodsDetailActivity extends BaseActivity {
         });
     }
 
+    @OnClick({R.id.back, R.id.cart, R.id.share, R.id.add_cart, R.id.buy})
+    public void onViewClicked(View view) {
+        Intent intent= null;
+        switch (view.getId()) {
+            case R.id.back:
+                finish();
+                break;
+            case R.id.cart:
+                break;
+            case R.id.share:
+                break;
+            case R.id.add_cart:
+                break;
+            case R.id.buy:
+                intent = new Intent(this,OrderConfirmActivity.class);
+                startActivity(intent);
+                break;
+        }
+    }
 }

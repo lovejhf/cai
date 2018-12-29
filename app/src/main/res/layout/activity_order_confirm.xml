@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.OrderConfirmActivity">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_marginBottom="70dp"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:drawableLeft="@mipmap/ic_order_location"
+                    android:drawableRight="@mipmap/ic_left_more"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:padding="@dimen/dp_10"
+                    android:text="请新增收货地址" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:background="@color/window_color" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/choose_time"
+                    android:background="@color/white"
+                    android:drawableLeft="@mipmap/ic_food_send_time"
+                    android:drawableRight="@mipmap/ic_left_more"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:padding="@dimen/dp_10"
+                    android:text="请选择配送时间" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/goods_list"
+                    android:layout_width="match_parent"
+                    android:background="@color/white"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10" />
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/order_info"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            >
+                <TextView
+                    android:text="实付款"
+                    android:layout_weight="0.85"
+                    android:layout_width="match_parent"
+                    android:textSize="15sp"
+                    android:padding="@dimen/dp_10"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content" />
+                <com.aries.ui.view.radius.RadiusTextView
+                    android:layout_width="match_parent"
+                    android:text="确认提交"
+                    android:layout_margin="@dimen/dp_10"
+                    android:layout_weight="1.0"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_10"
+                    app:rv_radius="2.5dp"
+                    android:textSize="18sp"
+                    app:rv_backgroundColor="@color/color_02C761"
+                    android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

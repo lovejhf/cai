@@ -10,7 +10,7 @@ import java.util.Date;
 public class SearchHistory {
     @PrimaryKey(AssignType.BY_MYSELF)
     private String name;
-    private Date crate_time;
+    private long crate_time;
 
     public String getName() {
         return name;
@@ -20,11 +20,11 @@ public class SearchHistory {
         this.name = name;
     }
 
-    public Date getCrate_time() {
+    public long getCrate_time() {
         return crate_time;
     }
 
-    public void setCrate_time(Date crate_time) {
+    public void setCrate_time(long crate_time) {
         this.crate_time = crate_time;
     }
 }
