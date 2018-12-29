@@ -36,8 +36,6 @@ android {
     }
 
 }
-
-
 MobSDK {
     appKey "29714f045a5a4" //share_sdk appkey
     appSecret "dbefc759427ee08940a399e22e2d7360"
